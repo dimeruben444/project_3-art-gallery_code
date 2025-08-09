@@ -1,6 +1,25 @@
 @use "../abstracts/index" as *;
 
 footer {
-  padding: 1em;
-  text-align: center;
+  padding: 3em 2em; 
+  background-color: $black;
+  a.logo img{
+    width: 120px;
+    margin-bottom: 2.2em;
+  
+  }
+  p{
+    color: $white;
+    font-family: $sbtittle;
+    font-weight: 100;
+    font-size: 1.1em;
+    line-height: 1.5em;
+  }
+
+  nav ul{
+    @include reset-list();
+    gap: 1.2em;
+
+  }
 }
+

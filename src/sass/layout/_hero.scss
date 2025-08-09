@@ -1,1 +1,61 @@
 @use "../abstracts/index" as *;
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 8em;
+
+    .hero__item1{
+        order: -1;
+        img{
+            width: 550px;
+            object-position: -75px;
+        }
+    }
+
+    .hero__item2{
+        h2{
+           font-family: $tittle; 
+           font-size: 55px;
+           font-weight:800 ;
+           margin-bottom: 0.3em;
+        }
+        p{
+            font-family: $sbtittle; 
+            font-size: 1.3em;
+            font-weight:200 ;
+            line-height: 1.5em;
+        }
+
+        
+    }
+
+    .hero__item4{
+        img{
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        
+    }
+    .hero__item5{
+        background-color: $black;
+        padding: 2.4em 1.5em;
+        h2{
+           font-family: $tittle; 
+           font-size: 55px;
+           font-weight:800 ;
+           margin-bottom: 0.3em;
+           color: $white;
+        }
+        p{
+            font-family: $sbtittle; 
+            font-size: 1.3em;
+            font-weight:100 ;
+            line-height: 1.5em;
+            color: $white;
+        }
+    }
+}
