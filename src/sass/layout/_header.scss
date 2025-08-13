@@ -9,10 +9,33 @@ header {
     height: 250px;
     background-position: center 50%;
     margin-bottom: 2.2em;
+    background-repeat: no-repeat;
+
+    @include breakpoint(tablet){
+      position: absolute;
+     background-size: 76%;
+     background-position: left 0%;
+     height: 100%;
+     width: 80%;
+     z-index: -1;
+    }
+
+
+  }
+
+  .container1{
+    @include breakpoint(tablet){
+      position: relative;
+      top: 130px;
+      left: 195px;
+    }
   }
   .logo{
     width: 312px;
     margin-bottom: 2.4em;
+    @include breakpoint(tablet){
+      margin-bottom: 2.4em;
+    }
   }
   p{
     font-family: $sbtittle;
@@ -20,15 +43,54 @@ header {
     font-weight: 200 ;
     line-height: 1.6em;
     margin-bottom: 1.5em;
+    @include breakpoint(tablet){
+      margin-bottom: 2.4em;
+    }
+
     
   }
 
   .btn_group{
 
     display: flex;
-    align-items: center;
     align-items: stretch;
     margin-bottom: 6em;
+
+    a{
+      display: flex;
+    }
+    .btn{
+      @include btn()
+    }
+
+    .btn__i{
+      @include btn__i()
+    }
+  }
+}
+
+// location.html
+
+
+.map{
+  background-image: url(/img/map.png);
+  height: 550px;
+  background-position: center 50%;
+  position: relative;
+
+  div{
+    display: flex;
+    align-items: stretch;
+     @include breakpoint(tablet){
+            margin-left: 3em;
+        
+        
+        
+        }
+    
+    a{
+      display: flex;
+    }
 
     .btn{
       @include btn()
@@ -37,6 +99,20 @@ header {
     .btn__i{
       @include btn__i()
     }
+  }
+
+  .map__point{
+    position: absolute;
+    top: 235px;
+    right: 180px;
+    @include breakpoint(tablet){
+      top: 235px;
+      right: 350px;
+        
+        
+        
+    }
+    
   }
 }
 

@@ -6,56 +6,200 @@
     gap: 1em;
     margin-bottom: 8em;
 
-    .hero__item1{
-        order: -1;
-        img{
-            width: 550px;
-            object-position: -75px;
+    .grid-row1{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 45% 55%;
+            gap: 0.6em;
+            margin-bottom: -5px;
         }
     }
 
+    .grid-row2{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: 0.6em;
+            
+        }
+    }
+
+
+    .hero__item1{
+        order: -1;
+        @include breakpoint(tablet){
+            overflow: hidden;
+            
+        }
+        img{
+            width: 550px;
+            object-position: -75px; 
+            @include breakpoint(tablet){
+               object-fit: cover;
+               height: 100%;
+               
+            }
+        }
+    }
+
+
     .hero__item2{
+        padding-top: 1.3em;
+        padding-right: 4.5em;
+        padding-bottom: 2em ;
+
+        @include breakpoint(tablet){
+            order: -1;
+        }
         h2{
            font-family: $tittle; 
-           font-size: 55px;
+           font-size: 50px;
            font-weight:800 ;
            margin-bottom: 0.3em;
+           line-height:45px;
         }
         p{
             font-family: $sbtittle; 
-            font-size: 1.3em;
+            font-size: 18px;
             font-weight:200 ;
             line-height: 1.5em;
-        }
+        }  
+    }
 
-        
+    .hero__item3{
+
+        @include breakpoint(tablet){
+            
+            grid-row: span 2;
+            
+        }
+        img{
+            @include breakpoint(tablet){
+               object-fit: cover;
+               height: 100%;
+               width: 398px;
+            }
+
+        }
     }
 
     .hero__item4{
+        
+        
+        
         img{
             height: 220px;
             width: 100%;
-            object-fit: cover;
-        }
-        
-        
+            object-fit: cover; 
+            @include breakpoint(tablet){
+               object-fit: cover;
+               height: 313px;
+               width: 100%;
+            }
+        } 
     }
+
     .hero__item5{
         background-color: $black;
         padding: 2.4em 1.5em;
+        padding-top:3em;
+        @include breakpoint(tablet){
+            height: 396px;
+            padding-top:4em;
+            padding-right: 2em;
+            
+        }
+
+
+
         h2{
            font-family: $tittle; 
            font-size: 55px;
            font-weight:800 ;
-           margin-bottom: 0.3em;
+           margin-bottom: 0.5em;
            color: $white;
+           line-height: 0.9em;
         }
         p{
             font-family: $sbtittle; 
-            font-size: 1.3em;
-            font-weight:100 ;
-            line-height: 1.5em;
+            font-size: 1.1em;
+            font-weight:200 ;
+            line-height: 1.4em;
             color: $white;
+            
         }
+    }
+}
+
+// location descript
+
+.descript{
+    background-color: $black;
+    padding: 2em 1.2em;
+
+    @include breakpoint(tablet){
+        display: flex;
+        padding: 3em;
+        padding-top: 4em;
+        
+    }
+    h1{
+        color: $white;
+        font-family: $tittle;
+        font-size: 3em;
+        font-weight: 800;
+        margin-bottom: 0.8em;
+         @include breakpoint(tablet){
+            margin-right: 2.4em;
+        
+        
+        
+        }
+    }
+
+    address{
+        color: $white;
+        font-style: normal;
+        margin-bottom: 2em;
+        h3{
+            color: $orange;
+            font-size: 2em;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 0.4em;
+            font-family: $tittle;
+            
+        }
+        p{
+            font-size: 1em;
+            font-weight:200 ;
+            margin-bottom: 0.2em;
+            
+        }
+        
+
+
+    }
+    p{
+        color: $white;
+        font-size: 1em;
+        font-weight:200 ;
+        margin-bottom: 0.2em;
+        line-height: 1.5em;
+         @include breakpoint(tablet){
+            margin-bottom: 3em;
+            margin-right: 3em;
+        
+        
+        
+        }
+
     }
 }

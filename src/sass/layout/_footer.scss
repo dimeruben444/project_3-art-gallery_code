@@ -3,6 +3,11 @@
 footer {
   padding: 3em 2em; 
   background-color: $black;
+
+  @include breakpoint(tablet){
+    display: flex;
+    justify-content: space-between;
+  }
   a.logo img{
     width: 120px;
     margin-bottom: 2.2em;
@@ -14,11 +19,48 @@ footer {
     font-weight: 100;
     font-size: 1.1em;
     line-height: 1.5em;
+    @include breakpoint(tablet){
+      width: 300px;
+      margin-right: 4em
+    }
   }
 
   nav ul{
     @include reset-list();
     gap: 1.2em;
+    @include breakpoint(tablet){
+      align-items: start;
+    }
+  }
+}
+
+footer.orange {
+  padding: 3em 2em; 
+  background-color: $orange;
+  a.logo img{
+    width: 120px;
+    margin-bottom: 2.2em;
+  
+  }
+  p{
+    color: $black;
+    font-family: $sbtittle;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1.8em;
+  }
+
+  nav ul{
+    @include reset-list();
+    gap: 1.2em;
+
+    @include breakpoint (tablet){
+      align-items: start;
+    }
+    li img{
+      width: 25px;
+    }
 
   }
 }
