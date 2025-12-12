@@ -1,19 +1,39 @@
 @use "../abstracts/index" as *;
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
-body{
-    margin: 0;
-    width: 100%;
-    
-    
+body {
+  margin: 0;
+  width: 100%;
+  font-family: $sbtittle;
 }
 
-.container{
-    width: 375px;
+.container1 {
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 1em;
+  @include breakpoint(tablet) {
+    padding: 1em;
+  }
+}
+
+.container2 {
+  width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 1em;
+  @include breakpoint(tablet) {
+    margin-top: 300px;
+    width: 740px;
+    padding: 2em;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
+  }
 }

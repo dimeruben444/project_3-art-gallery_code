@@ -1,6 +1,7 @@
 @use "../abstracts/index" as *;
 
 header {
+  
 
   .decorative{
     background-image: url("/img/old-woman.jpg");
@@ -9,10 +10,88 @@ header {
     height: 250px;
     background-position: center 50%;
     margin-bottom: 2.2em;
+    background-repeat: no-repeat;
+    margin-top: 32px;
+
+    @include breakpoint(tablet){
+      position: absolute;
+     background-size: 76%;
+     background-position: left 0%;
+     height: 150%;
+     width: 80%;
+     z-index: -1;
+     margin-top: 0;
+     
+    }
+
+    @include breakpoint(desktop){
+      
+      height: 799px;
+      background-position: 80.66% 50%;
+      margin-bottom: 2.2em;
+      background-size: 540px auto;
+      z-index: 1;
+      
+    
+      
+      
+
+      &::before{
+        content: "";
+        width: 32vw;
+        min-height: 799px;
+        background-color: $black;
+        position: absolute;
+        z-index: -2;
+        
+      }
+    }
+
+  }
+
+  .container1{
+    
+    @include breakpoint(tablet){
+      position: relative;
+      top: 130px;
+      left: 195px;
+    }
+
+    @include breakpoint(desktop){
+      display: flex;
+      padding: 0;
+      margin: 0;
+      
+      
+
+      overflow: visible;
+      gap: 246px;
+      padding-top: 55px;
+      left: 10.7%;
+      width: 100%;
+      z-index: 2;
+
+      margin-bottom: 430px ;
+      & article {
+        width: 340px; 
+        font-size: 1.1em;
+      }
+
+      
+    }
+
+
   }
   .logo{
     width: 312px;
     margin-bottom: 2.4em;
+    @include breakpoint(tablet){
+      margin-bottom: 3.2em;
+    }
+
+    @include breakpoint(desktop){
+      width: 35vw;
+    }
   }
   p{
     font-family: $sbtittle;
@@ -20,15 +99,68 @@ header {
     font-weight: 200 ;
     line-height: 1.6em;
     margin-bottom: 1.5em;
+    @include breakpoint(tablet){
+      margin-bottom: 3.2em;
+      font-size: 1.14em;
+    }
+    @include breakpoint(desktop){
+      margin-bottom: 64px;
+      width: 320px;
+      
+    }
+
     
   }
 
   .btn_group{
 
     display: flex;
-    align-items: center;
     align-items: stretch;
     margin-bottom: 6em;
+
+    a{
+      display: flex;
+      white-space:nowrap; 
+      
+    }
+    .btn{
+      @include btn();
+      
+    }
+
+    .btn__i{
+      @include btn__i()
+    }
+  }
+}
+
+// location.html
+
+
+.map{
+  background-image: url(/img/map.png);
+  height: 550px;
+  background-position: center 50%;
+  position: relative;
+
+  
+
+  div{
+    display: flex;
+    align-items: stretch;
+    @include breakpoint(tablet){
+      margin-left: 3em;
+
+    }
+    @include breakpoint(desktop){
+      padding-left: 166px;
+      margin: 0;
+
+    }
+    
+    a{
+      display: flex;
+    }
 
     .btn{
       @include btn()
@@ -37,6 +169,24 @@ header {
     .btn__i{
       @include btn__i()
     }
+  }
+
+  .map__point{
+    position: relative;
+    top: 30%;
+    left: 42%; 
+    @include breakpoint(tablet){
+      position: relative;
+      top: 30%;
+      left: 46.3%; 
+    }
+
+    @include breakpoint(desktop){
+      position: relative;
+      top: 30%;
+      left: 47.6%; 
+    }
+    
   }
 }
 

@@ -3,6 +3,18 @@
 footer {
   padding: 3em 2em; 
   background-color: $black;
+
+  @include breakpoint(tablet){
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(desktop){
+    display: flex;
+    justify-content: space-between;
+    padding: 4.5em 130px ;
+    
+  }
   a.logo img{
     width: 120px;
     margin-bottom: 2.2em;
@@ -12,14 +24,111 @@ footer {
     color: $white;
     font-family: $sbtittle;
     font-weight: 100;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.5em;
+    @include breakpoint(tablet){
+      width: 300px;
+      margin-right: 4em
+    }
+
+    @include breakpoint(desktop){
+      width: 420px;
+      margin-right: 4em;
+      margin-bottom: 0
+    }
   }
 
   nav ul{
     @include reset-list();
     gap: 1.2em;
+    @include breakpoint(tablet){
+      align-items: start;
+    }
+  }
+}
 
+//our location
+
+footer.orange {
+  padding: 3em 2em; 
+  background-color: $orange;
+
+  @include breakpoint(desktop){
+        display: flex;
+        padding-left: 165px;
+        padding-right: 165px;
+        padding-top: 4em;
+        
+    }
+  a.logo img{
+    width: 120px;
+    margin-bottom: 2.2em;
+
+     @include breakpoint(tablet){
+      margin-right: 4em;
+      width: 14vw;
+    }
+
+    @include breakpoint(desktop){
+      margin-right: 6em;
+      width: 11vw;
+    }
+  
+  }
+  p{
+    color: $black;
+    font-family: $sbtittle;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1.8em;
+
+    @include breakpoint(tablet){
+      width: 34vw;
+      margin: 0
+    }
+    @include breakpoint(desktop){
+      width: 28vw;
+      margin: 0
+    }
+  }
+  
+
+  nav ul{
+    @include reset-list();
+    gap: 1.2em;
+
+    @include breakpoint (tablet){
+      align-items: start;
+    }
+    li img{
+      width: 25px;
+    }
+
+  }
+
+  .orange-container{
+    @include breakpoint (tablet){
+      display: flex;
+      
+      padding: 16px;
+      width: 100%;
+    }
+    @include breakpoint(desktop){
+        padding: 0;
+      }
+
+
+    nav{
+
+      @include breakpoint(tablet){
+        margin-left: auto;
+      }
+      @include breakpoint(desktop){
+        margin-left: auto;
+      }
+      
+    }
   }
 }
 
